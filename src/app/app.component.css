@@ -1,0 +1,49 @@
+.div_page{
+    position:float;
+    width:100%;
+    opacity:0.98;
+}
+
+.main_menu{
+    background-image:linear-gradient(120deg, #737373, #a6a6a6);
+    background-attachment:fixed;
+    background-size: cover;
+    text-align:center;
+    padding:20px;
+    height:120px;
+}
+
+div.main_menu_item
+{
+    width:200px;
+    float:left;
+}
+.main_menu_item a:visited{
+    color:white;
+    text-decoration:none;
+}
+.main_menu_item a:hover
+{
+    color:#a0ffd1;
+    text-decoration:none;
+}
+.main_menu_item a
+{
+    color:white;
+    font-weight:bold;
+}
+
+.div_indicator{
+    margin-left:3%;
+    margin-top:20%;
+    position:fixed;
+    z-index: 10;
+}
+
+div.container-fluid{
+    padding-left:0px;
+    padding-right:0px;
+    background-image:linear-gradient(150deg, #808080, #CCCCCC);
+    background-attachment:fixed;
+    background-size: cover;
+}

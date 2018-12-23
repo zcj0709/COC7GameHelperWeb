@@ -1,0 +1,150 @@
+
+<div class="div_roll_character">
+    <h3>Step 2: Create Basic Information</h3>
+    <br><br>
+    <div *ngIf="show" class="alert alert-warning alert-danger fade show alertSize" role="alert">
+      <strong>Error!!</strong> You have to fill the name, gender and age.
+    </div>
+<form name="baseInfoForm" novalidate>
+    <div class="row mt-4">
+        <div class="col-xs-12 col-sm-12 col-md-1 col-md-offset-1">
+            <p class="label_name">Name</p>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4">
+            <input type="text" class="form-control" [(ngModel)]="investigator.name" name="name" maxlength="30" required/>
+            <span style="color:red" ng-show="baseInfoForm.name.$dirty && baseInfoForm.name.$invalid">
+                <span ng-show="baseInfoForm.name.$error.required">Require*</span></span>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-xs-12 col-sm-12 col-md-1  col-md-offset-1">
+                <p class="label_name">Gender</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-2">
+                <select class="form-control" [(ngModel)]="investigator.gender" name="gender" required>
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Unknown</option>
+                </select>
+                <span style="color:red" ng-show="baseInfoForm.gender.$dirty && baseInfoForm.gender.$invalid">
+                    <span ng-show="baseInfoForm.gender.$error.required">Require*</span></span>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <p class="label_name">Occupation</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="investigator.occupation" name="occupation" maxlength="30"/>
+                
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-1">
+                    <p class="label_name">Age</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="investigator.age" name="age" maxlength="30" required/>
+                    <span style="color:red" ng-show="baseInfoForm.age.$dirty && baseInfoForm.age.$invalid">
+                        <span ng-show="baseInfoForm.age.$error.required">Require*</span></span>
+                </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xs-12 col-sm-12 col-md-1 col-md-offset-1">
+                        <p class="label_name">Residence</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <input type="text" class="form-control" [(ngModel)]="investigator.residence" name="residence" maxlength="30"/>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <p class="label_name">Hometown</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                        <input type="text" class="form-control" [(ngModel)]="investigator.hometown" name="hometown" maxlength="30"/>
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-12 col-md-1">
+                        <p class="label_name">Era</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-2">
+                     <input type="text" class="form-control" [(ngModel)]="investigator.era" name="residence" maxlength="30"/>
+                 </div>
+             </div>
+             <div class="row mt-4">
+                <div class="col-xs-12 col-sm-12 col-md-1 col-md-offset-1">
+                    <p class="label_name">Strength</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.str" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <p class="label_name">Constitution</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.con" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-1">
+                    <p class="label_name">Size</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.siz" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+            </div>
+            <div class="row  mt-4">
+                <div class="col-xs-12 col-sm-12 col-md-1 col-md-offset-1">
+                    <p class="label_name">Dexterity</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.dex" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <p class="label_name">Appearance</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.app" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-1">
+                    <p class="label_name">Power</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.pow" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xs-12 col-sm-12 col-md-1 col-md-offset-1">
+                    <p class="label_name">Education</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.edu" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <p class="label_name">Intelligence</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control"  [(ngModel)]="characteristic.int" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-1">
+                    <p class="label_name">Luck</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2">
+                    <input type="text" class="form-control" [(ngModel)]="characteristic.luck" [ngModelOptions]="{standalone: true}" readonly maxlength="30">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col align-self-center">
+                    <button class="btn btn-secondary buttonSize" (click)="clear()" >Clear</button>
+                </div>
+                <div class="col align-self-end">
+                    <button type="Submit" class="btn btn-success buttonSize" (click)="submitPage2()" >Next</button>
+                </div>
+            </div>
+        </form>
+    </div>
+

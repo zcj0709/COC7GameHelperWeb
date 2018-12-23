@@ -1,0 +1,44 @@
+<div class="div_roll_character">
+	<h3>Dice Arena</h3>
+	<br><br>
+
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col-3">
+			<button class="btn btn-primary textcolor diceButton" (click)="roll(100,'list-group-item list-group-item-primary')" >D100</button><br>
+			<button class="btn btn-secondary textcolor diceButton" (click)="roll(20,'list-group-item list-group-item-secondary')" >D20</button><br>
+			<button class="btn btn-warning textcolor diceButton" (click)="roll(10,'list-group-item list-group-item-warning')" >D10</button><br>
+			<button class="btn btn-success diceButton" (click)="roll(8,'list-group-item list-group-item-success')" >D8</button><br>
+			<button class="btn btn-danger diceButton" (click)="roll(6,'list-group-item list-group-item-danger')" >D6</button><br>
+			<button class="btn btn-info diceButton" (click)="roll(4,'list-group-item list-group-item-info')" >D4</button><br>
+			<button class="btn btn-dark diceButton" (click)="roll(3,'list-group-item list-group-item-dark')">D3</button>
+			
+		</div>
+		<div class="col-6">
+
+			<ul class="list-group" id = "list">
+				<div *ngFor="let line of diceresult">
+
+					<li  class="{{line.style}}">
+						{{line.result}}
+					</li>
+				</div>
+					<li  class="list-group-item list-group-item-primary">
+						Please choose any Dice you want.
+					</li>
+					<li  class="list-group-item list-group-item-primary">
+						D stands for the word “die” or “dice”. The number after the D stands for the range of random numbers”.
+					</li>
+					<li  class="list-group-item list-group-item-primary">
+						For example: D8 generates the random numbers 1 through 8, D100 generates the numbers 1–100.
+					</li>
+
+				
+  			</ul>
+  		</div>
+
+  	</div>
+
+
+
+  </div>

@@ -1,0 +1,58 @@
+.div_roll_character{
+	padding-top:2%;
+	padding-left:2%;
+}
+
+.buttonSize{
+
+	width:80px;
+}
+.label_occupation_info, .label_occupation_info_check, .label_occupation_info_error{
+	font-size:13px;
+}
+
+p.label_name{
+	color:#000;
+	margin:0px;
+	margin-top:4px;
+	margin-left:15%;
+	height:30px;
+	
+}
+.input_skills{
+	margin:0px;
+	margin-top:4px;
+	padding-left:0px;
+}
+.alertSize{
+	margin-left:233px;
+	width:1338px;
+}
+table {
+	padding-left:5px;
+	padding-right:0px;
+	margin-right: 15px;
+	color:#000;
+	width:20%;
+	float:left;
+	border:solid 1px #000;
+	border-radius:0px;
+	box-shadow:none;
+	background-color:transparent;
+	border-collapse: collapse; font-family: Futura, Arial, sans-serif; 
+
+}
+
+span.span_green{
+	color:green;
+}
+th, td { padding: .5em;border: 1px solid;min-height: 10px;font-size:15px;}
+tr:hover { background: #808080; }
+table input {
+	background-color: transparent;
+	border-bottom: solid 1px #000;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	width: 55px;
+}

@@ -1,0 +1,15 @@
+.div_roll_character{
+	padding-top:2%;
+	padding-left:2%;
+}
+.buttonSize{
+
+	width:80px;
+}
+
+[hidden] { display: none !important;}
+
+.alertSize{
+
+	width:500px;
+}

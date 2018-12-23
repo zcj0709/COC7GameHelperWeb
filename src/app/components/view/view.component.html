@@ -1,0 +1,54 @@
+<div class="div_roll_character">
+   <h3> {{title}}</h3>
+   <br><br>
+
+
+<div class="row justify-content-center">
+    <div class="col-10">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                    <th>Residence</th>
+                    <th>Hometown</th>
+                    <th>Era</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let person of investigators">
+                <tr>
+                    <td>
+                        {{person.name}}
+                    </td>
+                    <td>
+                        {{person.gender}}
+                    </td>
+                    <td>
+                    	 {{person.age}}
+                    </td>
+                    <td>
+                    	 {{person.occupation}}
+                    </td>
+                    
+                    <td>
+                        {{person.residence}}
+                    </td> 
+                    <td>
+                        {{person.hometown}}
+
+                    </td>
+                    <td >
+                    	 {{person.era}}
+                    </td>  
+                    <td style="text-align: center;width: 20%">
+                        <button class="btn btn-outline-success buttonLeft" (click)="download(person.id)" >Download</button>
+                        <button class="btn btn-outline-danger" (click)="delete(person.id)" >Delete</button>
+                    </td>    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+<div class="div_roll_character">
+   <h3> {{title}}</h3>
+   <br><br>
+   <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-2"></div>
+    <div class="col-xs-12 col-sm-12 col-md-2">
+        <b>Total Career Points: <span class=" span_green">{{crpt1+crpt2+crpt3}}</span></b>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-2">
+        <b>Total Interest Points: <span class=" span_green">{{itpt1+itpt2+itpt3}}</span></b>
+    </div>
+    </div>
+    <br>
+
+<div *ngIf="show" class="alert alert-warning alert-danger fade show alertSize" role="alert">
+      <strong>Error!!</strong> You have to fill in a number.
+</div>
+<div class="row justify-content-md-center">
+<!--     <div class="col-3"> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Initial</th>
+                    <th>Career</th>
+                    <th>Interest</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let skill of skills1; let i = index">
+                <tr>
+                    <td>
+                        {{skill.name}}
+                    </td>
+                    <td>
+                        {{skill.initial}}
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.career" (ngModelChange)="changeCareer1(i)" size="6">
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.interest" (ngModelChange)="changeInterest1(i)" size="6">
+                    </td>
+                    <td>
+                        {{skill.total}}
+                    </td>   
+                </tr>
+            </tbody>
+        </table>
+<!--     </div> -->
+    <!-- <div class="col-3"> -->
+      <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Initial</th>
+                    <th>Career</th>
+                    <th>Interest</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let skill of skills2; let i = index">
+                <tr>
+                    <td>
+                        {{skill.name}}
+                    </td>
+                    <td>
+                        {{skill.initial}}
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.career" (ngModelChange)="changeCareer2(i)" size="6">
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.interest" (ngModelChange)="changeInterest2(i)" size="6">
+                    </td>
+                    <td>
+                        {{skill.total}}
+                    </td>   
+                </tr>
+            </tbody>
+        </table>
+   <!--  </div>
+    <div class="col-3"> -->
+      <table>
+            <thead>
+                <tr>
+                    <th>Skill</th>
+                    <th>Initial</th>
+                    <th>Career</th>
+                    <th>Interest</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let skill of skills3; let i = index">
+                <tr>
+                    <td>
+                        {{skill.name}}
+                    </td>
+                    <td>
+                        {{skill.initial}}
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.career" (ngModelChange)="changeCareer3(i)" size="6">
+                    </td>
+                    <td>
+                        <input [(ngModel)]="skill.interest" (ngModelChange)="changeInterest3(i)" size="6">
+                    </td>
+                    <td>
+                        {{skill.total}}
+                    </td>   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- </div> -->
+ <br><br>
+<div class="row">
+    <div class="col-sm-9"></div>
+    <div class="col">
+        <button type="Submit" class="btn btn-success buttonSize" (click)="submitPage3()">Next</button>
+    </div>
+    </div>
+</div>
+ <br><br>

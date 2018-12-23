@@ -1,0 +1,38 @@
+.diceButton{
+	width:100px;
+	margin-bottom: 30px;
+	margin-left:100px;
+
+}
+
+.div_roll_character{
+	padding-top:2%;
+	padding-left:5%;
+	padding-right:5%;
+	padding-bottom:2%;
+}
+
+.textcolor{
+	color:white;
+}
+
+.sky {
+    color:white;
+    background-color:lightblue;
+    padding:20px;
+    font-family:"Courier New";
+}
+.tomato {
+    background-color:coral;
+    padding:40px;
+    font-family:Verdana;
+}
+
+li{
+	width:800px;
+}
+
+ul{
+	height:500px;
+	overflow-y:auto;
+}
